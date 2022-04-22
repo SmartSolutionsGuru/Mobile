@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSolutions.Mobile.Views.MobileNumberPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Text="Enter Registered Mobile Number" TextColor="Black" FontSize="24" HorizontalTextAlignment="Start" Margin="20,0,0,0"/>
+            <Label Grid.Row="2" Text="you will get 4-digit text via SMS" FontSize="14" TextColor="LightGray" FontAttributes="Bold" HorizontalOptions="Start" Margin="20,0,0,0"/>
+            <Label Grid.Row="3" Text="Phone No With Country Code" TextColor="Gray" FontSize="14" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="20,0,0,0"/>
+            <Grid Grid.Row="4" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="flag.png" Aspect="AspectFit" Margin="20,0,0,0"/>
+                <Entry Grid.Column="1" IsPassword="False" Text="+92" Placeholder="92" TextColor="Black" Margin="20,0,0,0" FontSize="16"/>
+                <Entry Grid.Column="2" IsPassword="False" Keyboard="Numeric" MaxLength="11"  Text="{Binding PhoneNumber,Mode=TwoWay}" Placeholder="323 0437552" TextColor="Black" Margin="0,0,20,0" FontSize="16"/>
+            </Grid>
+            <Button Grid.Row="6" Text="Verify Your Number via SMS" Background="#17A4EC" TextColor="White" FontSize="14" FontAttributes="Bold" Margin="30,5" CornerRadius="10" Command="{Binding SMSCommand}"/>
+            <Button Grid.Row="7" Text="Verify Your Number via WhatsApp" Background="#17A4EC" TextColor="White" FontSize="14" FontAttributes="Bold" Margin="30,5" CornerRadius="10" Command="{Binding WhatsAppCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

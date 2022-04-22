@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:SmartSolutions.Mobile.Views"
+       x:Class="SmartSolutions.Mobile.Views.AppShell"
+       Shell.NavBarIsVisible="True"
+       Shell.FlyoutItemIsVisible="False"
+       BackgroundColor="White"       
+       FlyoutBehavior="Disabled"
+       Shell.TabBarIsVisible="True" >
+
+    <Tab x:Name="Login">
+        <ShellContent  Shell.TabBarTitleColor="White"
+                       Shell.TabBarIsVisible="False" 
+                       Shell.TabBarBackgroundColor="White" 
+                       ContentTemplate="{DataTemplate views:MobileNumberPage}"/>
+    </Tab>
+
+    <TabBar Route="TabPage">
+        <Tab x:Name="VerfiyMobile">
+            <ShellContent Shell.TitleColor="#A8D36F"
+                          Shell.TabBarIsVisible="False"
+                          Shell.TabBarBackgroundColor="White"
+                          ContentTemplate="{DataTemplate views:VerifyMobileNumberPageView}"/>
+        </Tab>
+        <Tab Title="Home" Icon="homes.png">
+            <ShellContent Shell.TitleColor="#A8D36F"
+                          Shell.TabBarIsVisible="True"
+                          Shell.TabBarBackgroundColor="White"
+                          ContentTemplate="{DataTemplate views:HomePageView}"/>
+        </Tab>
+        <Tab Title="Inventory" Icon="Inventory.png">
+            <ShellContent Shell.TitleColor="#A8D36F"
+                          Shell.TabBarIsVisible="True"
+                          Shell.TabBarBackgroundColor="White"
+                          ContentTemplate="{DataTemplate views:InventoryPageView}"/>
+        </Tab>
+        <Tab Title="Partners" Icon="Partners.png">
+            <ShellContent Shell.TitleColor="#A8D36F"
+                          Shell.TabBarIsVisible="True"
+                          Shell.TabBarBackgroundColor="White"
+                          ContentTemplate="{DataTemplate views:ReportPageView}"/>
+        </Tab>
+    </TabBar>
+
+</Shell>

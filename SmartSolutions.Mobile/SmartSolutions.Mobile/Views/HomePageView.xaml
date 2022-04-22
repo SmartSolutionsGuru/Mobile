@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SmartSolutions.Mobile.Controls"
+             x:Class="SmartSolutions.Mobile.Views.HomePageView">
+    <Shell.TitleView>
+        <controls:Logout ShowLogOut="True"/>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.7*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Frame Grid.Column="0" CornerRadius="10" Margin="20,0,0,0" BackgroundColor="#17A4EC">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="1" Orientation="Horizontal">
+                            <Label Text="Rs." TextColor="White" FontSize="Medium" FontAttributes="Bold" Margin="10,0,0,0" HorizontalTextAlignment="Start"/>
+                            <Label Text="600,000" TextColor="White" FontSize="Medium" FontAttributes="Bold" Margin="10,0,0,0" HorizontalTextAlignment="Start"/>
+                        </StackLayout>
+                        <Label Grid.Row="3" Text="Total Sale" TextColor="White" FontSize="Header" HorizontalTextAlignment="Start" Margin="10,0,0,0"/>
+                        <Label Grid.Row="4" Text="October 2021" TextColor="White" TextDecorations="Underline" HorizontalTextAlignment="Start" Margin="10,0,0,0"/>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Column="1" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="1.3*"/>
+                        </Grid.RowDefinitions>
+                        <Frame CornerRadius="10" BackgroundColor="LawnGreen" VerticalOptions="StartAndExpand">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Rs." TextColor="White" FontSize="Medium" FontAttributes="Bold" Margin="10,0,0,0" HorizontalTextAlignment="Start"/>
+                                    <Label Text="375,250" TextColor="White" FontSize="Medium" FontAttributes="Bold" Margin="10,0,0,0" HorizontalTextAlignment="Start"/>
+                                </StackLayout>
+                                <Label Grid.Row="1" Text="Total Profit" TextColor="White" FontSize="Header" HorizontalTextAlignment="Start" Margin="10,0,0,0"/>
+                            </Grid>
+                        </Frame>
+                        <Frame Grid.Row="1" CornerRadius="10" BackgroundColor="Black" VerticalOptions="EndAndExpand">
+                            <StackLayout Orientation="Horizontal">
+                                <!--<Image Source="inventory.png" HeightRequest="30" WidthRequest="30"/>-->
+                                <Label Text="Pending Orders" TextColor="White" HorizontalTextAlignment="Start" FontSize="Header"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:renderer="clr-namespace:SmartSolutions.Mobile.Rendrer"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundImageSource="loginpage4.png"
+             Opacity="0.5"
+             x:Class="SmartSolutions.Mobile.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="50,0,50,0" VerticalOptions="Center">
+            <Frame BorderColor="Gray" HeightRequest="40" Padding="10,6" CornerRadius="30" WidthRequest="150">
+                <renderer:BorderlessEntry IsPassword="False" 
+                                          HeightRequest="42" 
+                                          BackgroundColor="White" 
+                                          Keyboard="Email" 
+                                          Placeholder="abc@abc.com" 
+                                          PlaceholderColor="LightGray" 
+                                          WidthRequest="150" 
+                                          VerticalOptions="EndAndExpand" 
+                                          Text="{Binding Email,Mode=TwoWay}" 
+                                          TextColor="Gray" 
+                                          Margin="0,0,0,0" 
+                                          FontSize="14">
+                </renderer:BorderlessEntry>
+            </Frame>
+            <Frame BorderColor="Gray" HeightRequest="40" Padding="10,13,10,0" CornerRadius="30" WidthRequest="150">
+                <renderer:BorderlessEntry IsPassword="True" 
+                                          HeightRequest="42" 
+                                          Text="{Binding Password,Mode=TwoWay}"  
+                                          PlaceholderColor="LightGray"
+                                          Placeholder="********"
+                                          BackgroundColor="White" 
+                                          TextColor="Gray" 
+                                          VerticalOptions="EndAndExpand"
+                                          Margin="0,0,0,2" 
+                                          FontSize="Medium"/>
+            </Frame>
+            <Button VerticalOptions="Center" Text="Login" BackgroundColor="#3099c5" CornerRadius="30" Command="{Binding LoginCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
